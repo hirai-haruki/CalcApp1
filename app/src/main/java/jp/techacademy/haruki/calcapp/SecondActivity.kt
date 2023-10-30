@@ -15,25 +15,10 @@ class SecondActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val value1 = intent.getDoubleExtra("VALUE1", 0.0)
-        val value2 = intent.getDoubleExtra("VALUE2", 0.0)
+        val value1 = intent.getDoubleExtra("VALUE", 0.0)
 
-        fun showAnswer(ans: View) {
-            if (ans.id == R.id.button1) {
-                binding.textView.text = "${value1 + value2}"
-            }
-            if (ans.id == R.id.button2) {
-                binding.textView.text = "${value1 - value2}"
-            }
-            if (ans.id == R.id.button2) {
-                binding.textView.text = "${value1 * value2}"
-            }
-            if (ans.id == R.id.button2) {
-                binding.textView.text = "${value1 / value2}"
-            }
+        binding.textView.text=value1.toString()
         }
     }
-}
-
 
 
